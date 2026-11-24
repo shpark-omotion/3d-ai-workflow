@@ -1,45 +1,36 @@
-# Omotion 3D AI Workflow
+# Omotion 3D AI Workflow — 기술 리서치 및 도입 가이드
 
-**AI와 함께 캐릭터를 만들고, 원하는 디자인에 맞게 수정하고, 실제 사용할 수 있는지 확인하는 제작 키트.**
+기존 3D 제작 도구와 AI를 활용해 디자이너가 원하는 캐릭터를 더 쉽게 제작·수정·검수하도록 돕는 자료 모음이다. 자체 제작 플랫폼 개발 프로젝트가 아니다.
 
-> v0.1 파일럿 검토본 · 실제 디자이너 PC에서 연결 및 제작 테스트 전입니다. 아직 설치 프로그램이나 완전 자동 제작 서비스가 아닙니다.
+> 도입 검토본 · 2026-11-24. 실제 회사 PC에서의 설치, 유료 생성, 제작 결과 및 생산성은 아직 검증하지 않았다.
 
-## 처음 사용하는 분
+## 처음 시작하는 디자이너
 
-1. 사용 승인된 테스트 캐릭터를 준비하고 담당자에게 [설치 및 연결](docs/SETUP.md)을 요청하세요. 회사 에셋은 승인된 별도 작업 공간에만 둡니다.
-2. 압축을 푼 이 폴더를 Codex 데스크톱에서 프로젝트로 엽니다. Astra 사용 가능 여부를 확인합니다.
-3. [첫 캐릭터 만들기](docs/START-HERE.md)의 첫 요청을 복사합니다.
-4. 원본 이미지와 유지할 디자인 특징을 전달한 뒤 AI의 계획을 확인합니다.
-5. Tripo에서 생성하고 Blender에서 수정한 결과를 직접 확인합니다. 문제가 있는 부분만 다시 요청합니다. AI가 실제로 조작할 수 없는 환경에서는 수동으로 작업하고 검수 근거를 남깁니다.
+[시작 가이드](docs/START-HERE.md)에서 현재 상황에 맞는 경로를 선택한다.
 
-**이미 3D 모델이 있다면 생성 단계를 건너뛰고 수정 또는 검수부터 시작할 수 있습니다.**
-
-## 필요한 문서만 읽기
-
-| 내가 하고 싶은 일 | 문서 |
+| 경로 | 언제 선택하나 |
 |---|---|
-| 처음 시작 / 캐릭터 한 개 제작 | [START-HERE](docs/START-HERE.md) |
-| 원하는 부위만 수정 / 리깅·표정 작업 | [PRODUCTION-GUIDE](docs/PRODUCTION-GUIDE.md) |
-| 납품 가능한지 확인 | [QUALITY-GUIDE](docs/QUALITY-GUIDE.md) |
-| 설치 또는 연결 문제 해결 | [SETUP](docs/SETUP.md) |
-| 개발 및 기술 도입 | [ARCHITECTURE](docs/ARCHITECTURE.md) · [RESEARCH](docs/RESEARCH.md) |
-| 현재 제작 현황 및 개선 효과 확인 | [PILOT](docs/PILOT.md) |
-| 앞으로 구현할 기능 | [ROADMAP](docs/ROADMAP.md) |
+| A. [Charakuru 활용](docs/CHARAKURU-GUIDE.md) | 회사 사용 권한과 VRM 적합성이 확인된 경우, 원작자 도구를 그대로 우선 평가 |
+| B. [기존 Tripo + Codex + Blender](docs/PRODUCTION-GUIDE.md) | A가 아직 허용되지 않거나 기존 GLB/FBX 제작 환경을 유지해야 하는 경우 |
 
-## AI에게 요청하는 예시
+최초 연결은 기술 담당자가 지원한다. 디자이너는 원본과 수정 요구를 정하고, 실제 후보·동작을 확인해 승인한다.
 
-- “이 원본으로 3D 캐릭터를 만들어 주세요. 얼굴과 헤어는 유지해 주세요.”
-- “기존 모델의 얼굴은 유지하고 목 연결부만 수정해 주세요.”
-- “이 모델의 리깅과 표정을 검사하고 실제로 확인한 결과를 보여 주세요.”
+## 필요한 자료
 
-Codex에서 로컬 Skill `character-production`이 발견되면 사용할 수 있습니다. 지원하는 클라이언트에서는 `$character-production`으로 명시 호출할 수 있습니다. Skill이 로드되지 않으면 START-HERE의 첫 요청과 제작 가이드를 직접 전달합니다.
+| 목적 | 문서 |
+|---|---|
+| 도구 선택과 재사용 판단 | [RECOMMENDATION](docs/RECOMMENDATION.md) |
+| 원작자 키트의 화면·설치·사용 예제 | [CHARAKURU-GUIDE](docs/CHARAKURU-GUIDE.md) |
+| 기존 도구 연결 및 오류 해결 | [SETUP](docs/SETUP.md) |
+| 일반 제작·부분 수정·품질 확인 | [PRODUCTION-GUIDE](docs/PRODUCTION-GUIDE.md) · [QUALITY-GUIDE](docs/QUALITY-GUIDE.md) |
+| 출처와 기존 기술 조사 | [RESEARCH](docs/RESEARCH.md) |
+| 실습 및 비교 기록 | [PILOT](docs/PILOT.md) |
+| 지원 범위와 남은 결정 | [ROADMAP](docs/ROADMAP.md) · [VALIDATION](docs/VALIDATION.md) |
 
 ## 제공 범위
 
-- 제공: 제작 규칙, 단일 통합 Skill, 요청 예시, 품질 기준, 환경 조회 스크립트 및 테스트, 비교 실험 양식.
-- 아직 제공하지 않음: 설치 자동화, 검증된 실제 MCP 연결, 자동 메시·리그 검사기, Hook 설정, ComfyUI JSON, 완전 자율 제작.
-- 회사 원본·작업 결과·계정정보는 승인된 별도 로컬 작업 위치에 저장합니다. 이 저장소에 커밋하지 않습니다.
+기존 공식 도구와 Skill 활용법, 한국어 안내, 복사 가능한 요청문, 연결 진단 및 실습 계획을 제공한다. Charakuru는 원작자 공식 배포본을 별도로 받으며 이 저장소에 포함하지 않는다. 자체 Skill과 환경 조회기는 경로 B의 선택 보조 수단이다. 원작자 프로젝트에 기존 AGENTS.md나 Skill을 덮어쓰지 않는다.
 
-## 상태 및 지원 범위
+[기존 v0.2 PoC Draft PR #1](https://github.com/shpark-omotion/3d-ai-workflow/pull/1)은 별도로 보존한다. 실제 필요성이 확인되기 전에는 자체 UI·리깅·QA·상태관리·Hook의 추가 개발이나 병합을 진행하지 않는다.
 
-[검증 기록](docs/VALIDATION.md)을 먼저 확인하세요. 현재는 **제작 규칙과 실습 지원 키트**이며, 원클릭 설치·자동 생성·자동 QA가 검증된 제품은 아닙니다. 최초 설치와 실습은 기술 담당자와 함께 진행합니다. 공개 범위와 무관하게 실제 회사 작업 기록·비용·캐릭터 데이터는 Git에 저장하지 않습니다.
+회사 내부 자료, 작업 에셋, 계정 정보, 비용 및 평가 결과는 승인된 비공개 작업 위치에 저장한다. 공개 Git에는 넣지 않는다.

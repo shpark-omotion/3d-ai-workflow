@@ -23,3 +23,11 @@
 - https://youtu.be/58UpDAnbdkM
 
 이전 대화의 Computer Use 중심 사례는 도구 선택 가설로만 사용한다. 영상 전체 또는 X 원문을 이번 작업에서 재검증하지 않았으며, 특정 비율이나 생산성 수치를 검증된 사실로 채택하지 않는다. 도구 제공 사실과 회사의 실제 사용 현황은 구분한다.
+
+## 도입 지원 관점의 재평가 (2026-11-24)
+
+- [도구별 재사용 결정](RECOMMENDATION.md)과 [Charakuru 실습 안내](CHARAKURU-GUIDE.md)가 현재 추천 정본이다. 위 표의 기존 P3/P4 개발 계획은 과거 방향이며 현재 개발 범위가 아니다.
+- 공개 [Charakuru 한국어 README](https://github.com/nanocle/Charakuru/blob/8eb22f6c6700dcc310896336596682594928024c/README.ko.md), [튜토리얼](https://github.com/nanocle/Charakuru/blob/8eb22f6c6700dcc310896336596682594928024c/docs/tutorial.ko.md), [라이선스](https://github.com/nanocle/Charakuru/blob/8eb22f6c6700dcc310896336596682594928024c/LICENSE), [v1.1.1 릴리스](https://github.com/nanocle/Charakuru/releases/tag/v1.1.1)를 직접 조회했다. 9개 Skill과 donor, UI는 공개 설명에 따른 제공 기능이다. 배포 ZIP 내부 및 실제 실행은 미검증이다.
+- Tripo 공식 사례는 전신을 한 번에 만드는 경로와 Body/Head/Hair 분리 후 Blender로 조립하는 경로를 구분한다. Charakuru의 Head(헤어 포함)/Body 후보 방식은 다른 경로다. 어느 쪽이 더 좋은지는 동일 원본으로 비교한다.
+- [Record & Replay](https://learn.chatgpt.com/docs/extend/record-and-replay)는 macOS와 Computer Use가 가능한 경우에만 반복 작업을 Skill로 기록할 후보로 둔다. [ComfyUI 공식 노드](https://developers.tripo3d.ai/ko/docs/comfyui-nodes)는 현재 문서상 2.0.0/API v3이며 기존 워크플로가 필요할 때만 연결한다.
+- 이전 X 게시물과 영상 원문 접근 한계는 유지한다. 공식 화면 링크를 활용하되 이미지·코드·제작 자산을 복제하지 않는다. 실제 사례의 시간/품질 개선 수치는 입증되지 않았다.
