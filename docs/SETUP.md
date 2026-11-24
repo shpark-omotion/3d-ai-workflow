@@ -1,5 +1,7 @@
 # 설치 및 연결 — 기술 담당자용
 
+이 문서는 **경로 B(기존 Tripo + Codex + Blender)**의 연결 안내다. Charakuru를 선택하면 [전용 가이드](CHARAKURU-GUIDE.md)의 라이선스 및 릴리스별 요구사항을 먼저 확인한다. 원작자 앱의 Node.js 22+ 요구와 Tripo Plugin의 Node.js 20+ 요구를 혼동하지 않는다. 모든 명령은 실행 승인 후 담당자가 수행하며 기존 설정을 보존한다.
+
 ## 기본 경로
 
 Codex 데스크톱 + 사용 가능한 Astra + Tripo Studio(웹) + Blender. Blender MCP는 실제 AI 조작용 권장 경로. Computer Use는 지원 시 선택. 새 작업용 PC를 강제하지 않으며 기존 환경을 재사용한다. 회사 정책과 설치 권한, 사용 가능한 클라이언트·계정·OS를 먼저 확인한다.
@@ -12,7 +14,7 @@ Codex에 다음을 요청한다.
 
 ```text
 scripts/doctor.py를 실행 가능한 경우 실행해 주세요. 기존 앱/설정은 변경하지 마세요.
-Astra의 실제 모델 표시, Blender 앱 버전, Tripo 로그인, MCP 도구 목록, Computer Use 활성화 상태, 로컬 Skill 로딩을 각각 확인해 주세요.
+사용할 모델(Astra 등)의 실제 모델 표시, Blender 앱 버전, Tripo 로그인, MCP 도구 목록, Computer Use 활성화 상태, 로컬 Skill 로딩을 각각 확인해 주세요.
 증거가 있는 것만 PASS, 확인할 수 없는 것은 NOT_RUN 또는 BLOCKED라고 보고해 주세요.
 ```
 
@@ -54,7 +56,7 @@ Scene 및 Object 이름과 유형, Armature 유무를 보고하고 어떠한 변
 
 `templates/runtime-check.md`를 채운다. 필수: 로컬 파일 작업 경로, Tripo 수동 생성 경로, Blender 수동 import, 실제 AI 작업 경로, Skill 발견/대체 경로. AI 수정 경로가 모두 불가능하면 수동 가이드로만 사용하며 AI 자동화 READY를 주장하지 않는다. 생산 자산 투입 전 허가된 샘플로 실험한다.
 
-Hook, ComfyUI, Charakuru는 필수 설치 대상이 아니다. P3/P4 승인과 별도 검증을 거친다.
+Hook과 ComfyUI는 기본 설치 대상이 아니다. 실제 반복 문제 또는 기존 팀 환경과의 필요성이 확인될 때 별도 검토한다. Charakuru는 [경로 A](CHARAKURU-GUIDE.md)에서 별도로 평가한다.
 
 ## 7. 최초 설치 확인과 인수인계
 
