@@ -1,0 +1,6 @@
+# Review-only example; not automatically installed. Merge into a trusted project config only with approval.
+# Verify package/add-on version pair and actual local uvx path before use.
+[mcp_servers.blender]
+command = "uvx"
+args = ["--python", "3.11", "mcp-for-blender==2.3.1"]
+env = { BLENDER_HOST = "localhost", BLENDER_PORT = "9876", BLENDER_MCP_SAFE_MODE = "1", DISABLE_TELEMETRY = "true" }

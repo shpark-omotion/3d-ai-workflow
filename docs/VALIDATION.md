@@ -18,3 +18,13 @@
 - 독립 검토: NOT_RUN. 위 결과는 작성자 자체 검증이다.
 - 원격 반영: 최초 파일 생성 요청이 403으로 거절되어 BLOCKED. 재조회에서 빈 저장소 상태를 확인했다. 공개 범위는 변경하지 않았다.
 - 운영 적용, 유료 생성 및 회사 자산 업로드: 미실행.
+
+## v0.2 Writer 검증 (2026-11-24)
+
+위 v0.1 원격 403 기록은 해결됐으며 base d59b321f3749481d2ad6e31659f19cd6f81d45e0에 반영되었다. v0.2는 별도 구현 브랜치에서 검토한다.
+
+- Linux/Python 3.13.5에서 `python -m unittest discover -s tests -v`: 총 21개, 17 PASS, Blender 통합 4 skip.
+- 테스트 자체 생성 GLB를 trimesh로 독립 로드: Head/Body/Hair 노드, 12면 닫힌 공유 큐브 메시 확인. 실제 정적 Hair 위치 변경 및 원본/비대상 노드/BIN 보존 단위 테스트 PASS.
+- Gate·Hook·ComfyUI 테스트에서 외부 서비스와 Blender 보고서는 mock이다. 실제 Blender 검사 결과라고 해석하지 않는다.
+- Blender/Codex 실행 파일 없음, bpy 미설치. 공식 바이너리/모듈 확보 시도 실패. 실제 QA·렌더·리그·표정·Tripo 생성·Computer Use·Skill 로딩·Hook·ComfyUI 실행·제품·디자이너 파일럿 NOT_RUN. 유료 작업/회사 데이터 업로드 없음.
+- [EXAMPLES](EXAMPLES.md)의 EX별 판정과 [SOURCE-MAPPING](SOURCE-MAPPING.md)을 참조한다. 독립 Reviewer는 미실행.

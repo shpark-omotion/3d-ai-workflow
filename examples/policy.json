@@ -1,0 +1,16 @@
+{
+  "target": "Blender test",
+  "max_triangles": 1000,
+  "max_credits": 0,
+  "max_attempts": 0,
+  "require_uv": false,
+  "require_material": false,
+  "require_rig": false,
+  "require_motion": false,
+  "require_runtime": false,
+  "open_meshes": [],
+  "required_bones": [],
+  "required_shapes": [],
+  "front": "-Y",
+  "face_mesh": "Head"
+}

@@ -46,3 +46,7 @@ description: 승인 원본을 기준으로 3D 캐릭터의 제작, 기존 모델
 ## Capability fallback
 
 Tripo 로그인 및 유료 실행이 불가하면 생성은 사용자에게 넘긴다. Blender 제어가 불가하면 조작 방법을 제시하고 실제 실행은 NOT_RUN으로 기록한다. Skill 자동 로딩이 불가하면 저장소 지침을 읽은 사실과 로딩 실패를 구분한다. 단순 수동 안내를 자동화 완료라고 판정하지 않는다.
+
+## v0.2 executable workflow (takes precedence over earlier manual-only steps)
+
+Read docs/HARNESS.md and select the matching EX-01~10 in docs/EXAMPLES.md; use docs/SOURCE-MAPPING.md for provider/tool decisions. Request the actual approved project path and policy; use scripts/harness.py init/status/reference/snapshot. Reuse the installed Tripo plugin or Studio, reserve one approved attempt then reconcile actual provider state and credits. Inspect previous QA and actual visual evidence before repair; for static independent GLB nodes only, move-static can apply an approved translation, otherwise use approved Blender tools on a copy. Preserve named meshes with snapshot --protect. Run qa on the new GLB, observe actual renders and compare; on failure route to affected part and rerun, never fabricate approvals. Human approval records are explicit; gate/deliver are mandatory for this kit. For unknown external state or missing tools report BLOCKED, retain candidate, do not retry blindly. Optional ComfyUI prompt drafts use scripts/comfy_plan.py; hooks are not enabled automatically. For rig/shape/animation use EX-04~06 and real poses, not mere control names.

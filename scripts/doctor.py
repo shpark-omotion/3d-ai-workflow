@@ -19,6 +19,8 @@ def inspect(root, which=shutil.which):
         "docs/START-HERE.md", "docs/SETUP.md", "docs/PRODUCTION-GUIDE.md",
         "docs/QUALITY-GUIDE.md", "templates/character-spec.md",
         "templates/run-state.md", "templates/runtime-check.md",
+        "scripts/harness.py", "scripts/blender/qa.py", "docs/HARNESS.md",
+        "docs/EXAMPLES.md", "docs/SOURCE-MAPPING.md",
     ):
         files[relative] = "PRESENT" if (root / relative).is_file() else "MISSING"
     return {
